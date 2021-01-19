@@ -98,7 +98,7 @@
     </header>
     <section class="container-fluid">
       <div class="row">
-        <div class="col-md-4 bg-color-conferences section-column">
+        <div class="col-lg-6 bg-color-conferences section-column">
           <div class="row">
             <div class="col-12">
               <h3 class="section-heading uppercase">
@@ -108,7 +108,7 @@
           </div>
           <div id="map"></div>
         </div>
-        <div class="col-md-8 bg-color-groups">
+        <div class="col-lg-6 bg-color-groups">
           <div class="row">
             <div class="col">
               <h3 class="section-heading uppercase">My Groups And Societies</h3>
@@ -283,11 +283,22 @@
         </div>
       </div>
     </footer>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 3,
+          center: {
+            lat: 46.619261,
+            lng: -33.134766,
+          },
+        });
+      }
+    </script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script
       async
       defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDHHyac2SiOYPNYxXMK7rqJjnB8nCaaxE&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGPG53Mm6onYH55NG0GCoE5PXDT0DUn0U&callback=initMap"
     ></script>
     <script src="assets/js/maps.js"></script>
   </body>
