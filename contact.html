@@ -21,6 +21,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_FnBsDWywAVUfURfHV5N38");
+      })();
+    </script>
     <title>Rosie</title>
   </head>
 
@@ -104,7 +113,7 @@
           </h3>
           <h5 class="uppercase text-center">Let's work together!</h5>
           <div class="center-form">
-            <form>
+            <form onsubmit="return sendMail(this);">
               <input
                 type="text"
                 name="name"
@@ -115,7 +124,7 @@
               />
               <input
                 type="email"
-                name="email"
+                name="emailaddress"
                 id="emailaddress"
                 class="form-control"
                 placeholder="Email"
@@ -205,5 +214,6 @@
         </div>
       </div>
     </footer>
+    <script src="assets/js/sendEmail.js"></script>
   </body>
 </html>
